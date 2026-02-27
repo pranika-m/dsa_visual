@@ -1,0 +1,65 @@
+/* CodeViewer Component Styles */
+
+.code-viewer {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.code-viewer__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+}
+
+.code-viewer__header h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.code-viewer__header h4::before {
+    content: '📝';
+}
+
+.code-viewer__frame {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+.code-viewer__content {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.code-viewer__content pre {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Custom scrollbar */
+.code-viewer__content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.code-viewer__content::-webkit-scrollbar-track {
+    background: var(--color-bg-elevated);
+}
+
+.code-viewer__content::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+}
+
+.code-viewer__content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-muted);
+}
+

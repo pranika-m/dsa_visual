@@ -1,0 +1,147 @@
+/* AnimationControls - Compact Single Row */
+
+.animation-controls {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm) var(--space-lg);
+    flex-shrink: 0;
+}
+
+.animation-controls__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.animation-controls__buttons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.anim-btn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.anim-btn:hover {
+    border-color: var(--color-accent-primary);
+    background: rgba(var(--color-accent-primary-rgb), 0.12);
+    transform: translateY(-1px);
+}
+
+.anim-btn:active {
+    transform: translateY(0);
+}
+
+.anim-btn--main {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-accent);
+    border: none;
+    font-size: 1.05rem;
+    box-shadow: 0 2px 8px rgba(var(--color-accent-primary-rgb), 0.3);
+}
+
+.anim-btn--main:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(var(--color-accent-primary-rgb), 0.46);
+}
+
+/* Speed Slider */
+.animation-controls__slider {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-width: 140px;
+    max-width: 180px;
+}
+
+.slider-label {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.speed-slider {
+    flex: 1;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--color-bg-input);
+    border-radius: 2px;
+    outline: none;
+}
+
+.speed-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: var(--color-accent-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 0 4px rgba(var(--color-accent-primary-rgb), 0.3);
+}
+
+.speed-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 8px rgba(var(--color-accent-primary-rgb), 0.46);
+}
+
+.speed-value {
+    font-size: 0.78rem;
+    color: var(--color-text-accent);
+    font-weight: 700;
+    font-family: var(--font-mono);
+    min-width: 32px;
+    text-align: center;
+}
+
+/* Progress */
+.animation-controls__progress {
+    padding: 0.25rem 0.7rem;
+    background: var(--color-bg-elevated);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    font-family: var(--font-mono);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .animation-controls__row {
+        justify-content: center;
+        gap: var(--space-md);
+    }
+
+    .animation-controls__slider {
+        order: 3;
+        width: 100%;
+        max-width: none;
+    }
+}
+

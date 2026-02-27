@@ -1,0 +1,108 @@
+/* LineByLineCode Component Styles */
+
+.line-by-line-code {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+}
+
+.line-by-line-code__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+}
+
+.line-by-line-code__lang {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+.line-by-line-code__status {
+    font-size: 0.75rem;
+    color: var(--color-text-accent);
+    font-family: var(--font-mono);
+}
+
+.line-by-line-code__content {
+    overflow-y: auto;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.code-line {
+    display: flex;
+    padding: 0.3rem 0;
+    transition: all 0.2s ease;
+}
+
+.code-line__number {
+    min-width: 40px;
+    padding: 0 var(--space-sm);
+    color: var(--color-text-muted);
+    text-align: right;
+    user-select: none;
+    border-right: 2px solid transparent;
+}
+
+.code-line__content {
+    padding: 0 var(--space-md);
+    color: var(--color-text-secondary);
+    white-space: pre;
+    flex: 1;
+}
+
+/* Active line - currently executing */
+.code-line--active {
+    background: rgba(var(--color-accent-primary-rgb), 0.18);
+}
+
+.code-line--active .code-line__number {
+    color: var(--color-accent-primary);
+    font-weight: bold;
+    border-right-color: var(--color-accent-primary);
+}
+
+.code-line--active .code-line__content {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+/* Past lines - already executed */
+.code-line--past {
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.code-line--past .code-line__number {
+    color: var(--color-accent-success);
+}
+
+.code-line--past .code-line__content {
+    color: var(--color-text-muted);
+}
+
+/* Scrollbar */
+.line-by-line-code__content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.line-by-line-code__content::-webkit-scrollbar-track {
+    background: var(--color-bg-elevated);
+}
+
+.line-by-line-code__content::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+}
+

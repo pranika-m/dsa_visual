@@ -1,0 +1,65 @@
+/* AlgorithmControls Component - Compact Sort Box */
+
+.algorithm-controls {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm) var(--space-md);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: border-color var(--transition-base);
+}
+
+.algorithm-controls:hover {
+    border-color: var(--color-border-hover);
+}
+
+.algorithm-controls__row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-xs);
+    width: 100%;
+}
+
+.algorithm-controls__label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.algorithm-controls__input {
+    width: 100%;
+    padding: 0.3rem 0.6rem;
+    background: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.algorithm-controls__input:focus {
+    outline: none;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 2px rgba(var(--color-accent-primary-rgb), 0.18);
+}
+
+.algorithm-controls__input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.algorithm-controls__btn {
+    border-radius: var(--radius-sm);
+    padding: 0.2rem 0.5rem;
+    min-width: 36px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    width: 100%;
+}

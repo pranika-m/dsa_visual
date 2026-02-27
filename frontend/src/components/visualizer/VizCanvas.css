@@ -1,0 +1,78 @@
+/* VizCanvas Component Styles */
+
+.viz-canvas-container {
+    flex: 1;
+    min-height: 250px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.viz-canvas__area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.viz-canvas__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.viz-canvas__placeholder p {
+    margin: 0;
+}
+
+.viz-canvas__description {
+    text-align: center;
+    padding: var(--space-sm) var(--space-md);
+    color: var(--color-text-accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-top: 1px solid var(--color-border);
+    background: rgba(var(--color-accent-primary-rgb), 0.08);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Placeholder for unimplemented visualizations */
+.viz-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.viz-placeholder p {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+}
+
+.viz-placeholder__data {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-elevated);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    max-width: 100%;
+    overflow-x: auto;
+}
+

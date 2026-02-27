@@ -1,0 +1,115 @@
+/* CustomInputControls Component Styles */
+
+.custom-input-controls {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.custom-input-controls__inputs {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+    min-width: 200px;
+}
+
+.input-group--small {
+    flex: 0 0 120px;
+    min-width: 120px;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-group input {
+    padding: 0.6rem 0.8rem;
+    background: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 3px rgba(var(--color-accent-primary-rgb), 0.12);
+}
+
+.input-group input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.custom-input-controls__playback {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+}
+
+.custom-input-controls__playback .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-left: auto;
+}
+
+.speed-control label {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+}
+
+.speed-control input[type="range"] {
+    width: 100px;
+    accent-color: var(--color-accent-primary);
+}
+
+@media (max-width: 600px) {
+    .custom-input-controls__inputs {
+        flex-direction: column;
+    }
+    
+    .input-group--small {
+        flex: 1;
+        min-width: auto;
+    }
+    
+    .custom-input-controls__playback {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .speed-control {
+        margin-left: 0;
+        justify-content: space-between;
+    }
+}
+

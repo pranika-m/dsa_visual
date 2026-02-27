@@ -1,0 +1,156 @@
+/* SandboxPanel Component Styles */
+
+.sandbox-panel {
+    border-left: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-secondary);
+    animation: slideInRight 0.3s ease;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sandbox__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-card);
+}
+
+.sandbox__header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.sandbox__header h3::before {
+    content: '💻';
+}
+
+/* Language Selector */
+.sandbox__language-selector {
+    display: flex;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-elevated);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.lang-btn {
+    padding: 0.3rem 0.8rem;
+    background: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+    border-color: var(--color-border-hover);
+    color: var(--color-text-primary);
+}
+
+.lang-btn--active {
+    background: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    color: white;
+}
+
+.sandbox__close {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.sandbox__close:hover {
+    background: var(--color-accent-danger);
+}
+
+.sandbox__editor {
+    flex: 1;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+/* Monaco Editor customizations */
+.sandbox__editor .monaco-editor {
+    background-color: var(--color-bg-input) !important;
+}
+
+.sandbox__editor .monaco-editor .overflow-guard {
+    border-radius: 0;
+}
+
+.sandbox__actions {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-card);
+    border-top: 1px solid var(--color-border);
+}
+
+.sandbox__actions .btn {
+    font-size: 0.85rem;
+    flex: 1;
+}
+
+.sandbox__output {
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-md);
+    max-height: 200px;
+    overflow-y: auto;
+    background: var(--color-bg-input);
+}
+
+.sandbox__output-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.sandbox__output-content {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent-success);
+    white-space: pre-wrap;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sandbox__output-content:empty::before {
+    content: 'Run your code to see output here.';
+    color: var(--color-text-muted);
+}
+
+/* Animation */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

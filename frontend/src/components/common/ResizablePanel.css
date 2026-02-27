@@ -1,0 +1,74 @@
+/* ResizablePanel Component Styles */
+
+.resizable-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.resizable-panel--horizontal {
+    flex-shrink: 0;
+}
+
+.resizable-panel--vertical {
+    flex-shrink: 0;
+}
+
+/* Resize Handle */
+.resize-handle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: background-color 0.2s ease;
+}
+
+.resize-handle--horizontal {
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    cursor: col-resize;
+}
+
+.resize-handle--horizontal.resize-handle--left {
+    right: auto;
+    left: 0;
+}
+
+.resize-handle--vertical {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    cursor: row-resize;
+}
+
+.resize-handle:hover,
+.resize-handle--active {
+    background-color: rgba(var(--color-accent-secondary-rgb), 0.2);
+}
+
+.resize-handle__indicator {
+    background-color: rgba(148, 163, 184, 0.15);
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+}
+
+.resize-handle--horizontal .resize-handle__indicator {
+    width: 2px;
+    height: 32px;
+}
+
+.resize-handle--vertical .resize-handle__indicator {
+    width: 32px;
+    height: 2px;
+}
+
+.resize-handle:hover .resize-handle__indicator,
+.resize-handle--active .resize-handle__indicator {
+    background-color: var(--color-accent-primary);
+}
+

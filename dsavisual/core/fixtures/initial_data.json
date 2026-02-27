@@ -1,0 +1,397 @@
+[
+  {
+    "model": "core.category",
+    "pk": 1,
+    "fields": {
+      "name": "Sorting Algorithms",
+      "slug": "sorting-algorithms",
+      "description": "Learn how different sorting algorithms organize data efficiently. From simple comparison-based sorts to advanced divide-and-conquer strategies.",
+      "icon": "📊",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 2,
+    "fields": {
+      "name": "Searching Algorithms",
+      "slug": "searching-algorithms",
+      "description": "Explore techniques to find elements in data structures — from linear scans to logarithmic binary searches.",
+      "icon": "🔍",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 3,
+    "fields": {
+      "name": "Linked Lists",
+      "slug": "linked-lists",
+      "description": "Understand pointer-based data structures where elements are connected through references rather than contiguous memory.",
+      "icon": "🔗",
+      "display_order": 3
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 4,
+    "fields": {
+      "name": "Trees",
+      "slug": "trees",
+      "description": "Hierarchical data structures including binary trees, BSTs, AVL trees, and traversal algorithms.",
+      "icon": "🌳",
+      "display_order": 4
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 5,
+    "fields": {
+      "name": "Stacks & Queues",
+      "slug": "stacks-queues",
+      "description": "Linear data structures with LIFO and FIFO access patterns — fundamental building blocks for many algorithms.",
+      "icon": "📚",
+      "display_order": 5
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 6,
+    "fields": {
+      "name": "Graphs",
+      "slug": "graphs",
+      "description": "Network-based data structures and algorithms including BFS, DFS, shortest paths, and spanning trees.",
+      "icon": "🕸️",
+      "display_order": 6
+    }
+  },
+
+  {
+    "model": "core.topic",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "title": "Bubble Sort",
+      "slug": "bubble-sort",
+      "short_description": "A simple comparison-based sorting algorithm that repeatedly steps through the list, swapping adjacent elements if they are in the wrong order.",
+      "difficulty": "easy",
+      "icon": "🫧",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "title": "Selection Sort",
+      "slug": "selection-sort",
+      "short_description": "An in-place comparison sort that divides the list into a sorted and unsorted region, repeatedly selecting the smallest element.",
+      "difficulty": "easy",
+      "icon": "👆",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "title": "Merge Sort",
+      "slug": "merge-sort",
+      "short_description": "A divide-and-conquer algorithm that splits the array in half, sorts each half, and merges them back together.",
+      "difficulty": "medium",
+      "icon": "🔀",
+      "display_order": 3
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "title": "Quick Sort",
+      "slug": "quick-sort",
+      "short_description": "An efficient divide-and-conquer sort that picks a pivot element and partitions the array around it.",
+      "difficulty": "medium",
+      "icon": "⚡",
+      "display_order": 4
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "title": "Linear Search",
+      "slug": "linear-search",
+      "short_description": "The simplest search algorithm — check every element one by one until the target is found.",
+      "difficulty": "easy",
+      "icon": "➡️",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 6,
+    "fields": {
+      "category": 2,
+      "title": "Binary Search",
+      "slug": "binary-search",
+      "short_description": "An efficient O(log n) search algorithm that repeatedly divides a sorted array in half to find the target.",
+      "difficulty": "easy",
+      "icon": "🎯",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 7,
+    "fields": {
+      "category": 3,
+      "title": "Singly Linked List",
+      "slug": "singly-linked-list",
+      "short_description": "A linked list where each node points to the next node, supporting insertion, deletion, and traversal.",
+      "difficulty": "easy",
+      "icon": "➡️",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 8,
+    "fields": {
+      "category": 3,
+      "title": "Doubly Linked List",
+      "slug": "doubly-linked-list",
+      "short_description": "A linked list where each node has pointers to both the next and previous nodes, allowing bidirectional traversal.",
+      "difficulty": "medium",
+      "icon": "↔️",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 9,
+    "fields": {
+      "category": 4,
+      "title": "Binary Search Tree",
+      "slug": "binary-search-tree",
+      "short_description": "A binary tree where left children are smaller and right children are larger, enabling efficient searching.",
+      "difficulty": "medium",
+      "icon": "🌲",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 10,
+    "fields": {
+      "category": 5,
+      "title": "Stack",
+      "slug": "stack",
+      "short_description": "A LIFO data structure supporting push and pop operations — used in function calls, undo systems, and expression evaluation.",
+      "difficulty": "easy",
+      "icon": "📦",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 11,
+    "fields": {
+      "category": 5,
+      "title": "Queue",
+      "slug": "queue",
+      "short_description": "A FIFO data structure supporting enqueue and dequeue operations — used in scheduling and BFS.",
+      "difficulty": "easy",
+      "icon": "🚶",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 12,
+    "fields": {
+      "category": 6,
+      "title": "BFS (Breadth-First Search)",
+      "slug": "bfs",
+      "short_description": "A graph traversal algorithm that explores all neighbors at the current depth before moving to the next level.",
+      "difficulty": "medium",
+      "icon": "🌊",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 13,
+    "fields": {
+      "category": 6,
+      "title": "DFS (Depth-First Search)",
+      "slug": "dfs",
+      "short_description": "A graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+      "difficulty": "medium",
+      "icon": "⬇️",
+      "display_order": 2
+    }
+  },
+
+  {
+    "model": "concepts.concept",
+    "pk": 1,
+    "fields": {
+      "topic": 1,
+      "title": "Bubble Sort Algorithm",
+      "slug": "bubble-sort-algorithm",
+      "overview": "Bubble Sort is the simplest sorting algorithm. It works by repeatedly stepping through the list, comparing adjacent elements, and swapping them if they are in the wrong order. The pass through the list is repeated until the list is sorted.",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "concepts.concept",
+    "pk": 2,
+    "fields": {
+      "topic": 6,
+      "title": "Binary Search Algorithm",
+      "slug": "binary-search-algorithm",
+      "overview": "Binary Search is an efficient algorithm for finding a target value within a sorted array. It works by repeatedly dividing the search interval in half, achieving O(log n) time complexity.",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "concepts.concept",
+    "pk": 3,
+    "fields": {
+      "topic": 7,
+      "title": "Singly Linked List Operations",
+      "slug": "singly-linked-list-operations",
+      "overview": "A singly linked list is a linear data structure where each element (node) contains data and a reference to the next node. Learn how to create, traverse, insert, and delete nodes.",
+      "display_order": 1
+    }
+  },
+
+  {
+    "model": "concepts.conceptsection",
+    "pk": 1,
+    "fields": {
+      "concept": 1,
+      "title": "What is Bubble Sort?",
+      "content": "## Introduction\n\nBubble Sort is one of the simplest sorting algorithms to understand and implement. It gets its name because smaller elements \"bubble\" to the top of the list (beginning of the array) with each iteration.\n\n### How it works\n\nThe algorithm compares each pair of adjacent elements and swaps them if they are in the wrong order. This process is repeated for every element in the array. After each complete pass, the largest unsorted element moves to its correct position at the end of the array.\n\n### Key Properties\n- **Time Complexity:** O(n²) in the worst and average cases\n- **Space Complexity:** O(1) — it sorts in place\n- **Stable:** Yes — equal elements maintain their relative order\n- **Adaptive:** Can be optimized to O(n) if the array is already sorted",
+      "section_type": "explanation",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "concepts.conceptsection",
+    "pk": 2,
+    "fields": {
+      "concept": 1,
+      "title": "Step-by-Step Walkthrough",
+      "content": "## Tracing Through an Example\n\nLet's trace Bubble Sort on the array `[5, 3, 8, 1, 2]`.\n\n### Pass 1\n- Compare 5 and 3 → Swap → `[3, 5, 8, 1, 2]`\n- Compare 5 and 8 → No swap → `[3, 5, 8, 1, 2]`\n- Compare 8 and 1 → Swap → `[3, 5, 1, 8, 2]`\n- Compare 8 and 2 → Swap → `[3, 5, 1, 2, 8]`\n\nAfter Pass 1, the largest element (8) is in its correct position.\n\n### Pass 2\n- Compare 3 and 5 → No swap\n- Compare 5 and 1 → Swap → `[3, 1, 5, 2, 8]`\n- Compare 5 and 2 → Swap → `[3, 1, 2, 5, 8]`\n\n### The Pattern\nNotice how with each pass, one more element reaches its final position. The inner loop can shrink by one each time because the end of the array is already sorted.",
+      "section_type": "explanation",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "concepts.conceptsection",
+    "pk": 3,
+    "fields": {
+      "concept": 1,
+      "title": "Complete Implementation",
+      "content": "## Bubble Sort in Python\n\nHere is the complete, optimized implementation of Bubble Sort. The `swapped` flag enables early termination if the array becomes sorted before all passes are complete.",
+      "section_type": "code",
+      "display_order": 3
+    }
+  },
+
+  {
+    "model": "concepts.codesnippet",
+    "pk": 1,
+    "fields": {
+      "section": 2,
+      "language": "python",
+      "code": "# Basic comparison and swap\nif arr[j] > arr[j + 1]:\n    arr[j], arr[j + 1] = arr[j + 1], arr[j]",
+      "explanation": "The core operation: compare adjacent elements and swap if they are in the wrong order.",
+      "is_final_code": false,
+      "display_order": 1
+    }
+  },
+  {
+    "model": "concepts.codesnippet",
+    "pk": 2,
+    "fields": {
+      "section": 3,
+      "language": "python",
+      "code": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        swapped = False\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n                swapped = True\n        if not swapped:\n            break\n    return arr\n\n# Example usage\nresult = bubble_sort([5, 3, 8, 1, 2])\nprint(result)  # Output: [1, 2, 3, 5, 8]",
+      "explanation": "The complete optimized Bubble Sort. The 'swapped' flag lets us exit early if no swaps occurred in a pass, meaning the array is already sorted.",
+      "is_final_code": true,
+      "display_order": 1
+    }
+  },
+
+  {
+    "model": "visualizer.visualizationconfig",
+    "pk": 1,
+    "fields": {
+      "concept": 1,
+      "viz_type": "array",
+      "default_input": {"array": [5, 3, 8, 1, 2]},
+      "action_options": ["sort", "sort_step", "reset"]
+    }
+  },
+  {
+    "model": "visualizer.visualizationconfig",
+    "pk": 2,
+    "fields": {
+      "concept": 2,
+      "viz_type": "array",
+      "default_input": {"array": [1, 3, 5, 7, 9, 11, 13], "target": 7},
+      "action_options": ["search", "search_step", "reset"]
+    }
+  },
+  {
+    "model": "visualizer.visualizationconfig",
+    "pk": 3,
+    "fields": {
+      "concept": 3,
+      "viz_type": "linked_list",
+      "default_input": {"values": [10, 20, 30, 40]},
+      "action_options": ["insert", "delete", "traverse", "reset"]
+    }
+  },
+
+  {
+    "model": "visualizer.animationstep",
+    "pk": 1,
+    "fields": {
+      "config": 1,
+      "action_name": "sort",
+      "keyframes": [
+        {"state": [5, 3, 8, 1, 2], "comparing": [0, 1], "description": "Compare 5 and 3"},
+        {"state": [3, 5, 8, 1, 2], "comparing": [0, 1], "swapped": true, "description": "Swap 5 and 3"},
+        {"state": [3, 5, 8, 1, 2], "comparing": [1, 2], "description": "Compare 5 and 8"},
+        {"state": [3, 5, 8, 1, 2], "comparing": [2, 3], "description": "Compare 8 and 1"},
+        {"state": [3, 5, 1, 8, 2], "comparing": [2, 3], "swapped": true, "description": "Swap 8 and 1"},
+        {"state": [3, 5, 1, 8, 2], "comparing": [3, 4], "description": "Compare 8 and 2"},
+        {"state": [3, 5, 1, 2, 8], "comparing": [3, 4], "swapped": true, "description": "Swap 8 and 2"},
+        {"state": [1, 2, 3, 5, 8], "sorted": true, "description": "Array is sorted!"}
+      ],
+      "code_highlight": "5,6,7",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "visualizer.animationstep",
+    "pk": 2,
+    "fields": {
+      "config": 2,
+      "action_name": "search",
+      "keyframes": [
+        {"state": [1, 3, 5, 7, 9, 11, 13], "low": 0, "high": 6, "mid": 3, "description": "Check middle element: 7"},
+        {"state": [1, 3, 5, 7, 9, 11, 13], "found": 3, "description": "Target 7 found at index 3!"}
+      ],
+      "code_highlight": "3,4,5",
+      "display_order": 1
+    }
+  }
+]

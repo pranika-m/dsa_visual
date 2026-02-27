@@ -1,0 +1,75 @@
+/* CompleteCode Component Styles */
+
+.complete-code {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-top: var(--space-lg);
+}
+
+.complete-code__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--color-bg-elevated);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.complete-code__title {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.complete-code__title::before {
+    content: '📄';
+}
+
+.complete-code__badge {
+    padding: 0.2rem 0.6rem;
+    background: rgba(var(--color-accent-primary-rgb), 0.18);
+    color: var(--color-accent-primary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-sm);
+}
+
+.complete-code__content {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.complete-code__content pre {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.complete-code__note {
+    padding: var(--space-md);
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    background: rgba(var(--color-accent-primary-rgb), 0.08);
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+}
+
+/* Scrollbar */
+.complete-code__content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.complete-code__content::-webkit-scrollbar-track {
+    background: var(--color-bg-elevated);
+}
+
+.complete-code__content::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+}
+

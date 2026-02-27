@@ -1,0 +1,436 @@
+/* LearningPath Component Styles */
+
+.learning-path {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--color-bg-secondary);
+    overflow: hidden;
+}
+
+.learning-path__header {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+    flex-shrink: 0;
+}
+
+.learning-path__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.learning-path__progress {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--color-bg-input);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar__fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary));
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+/* Steps */
+.learning-path__steps {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-sm);
+    scroll-behavior: smooth;
+}
+
+.learning-step {
+    margin-bottom: var(--space-xs);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.learning-step:hover {
+    border-color: var(--color-border-hover);
+    transform: translateX(2px);
+}
+
+.learning-step--active {
+    border-color: var(--color-accent-primary);
+    background: rgba(var(--color-accent-secondary-rgb), 0.12);
+}
+
+.learning-step--completed {
+    border-left: 3px solid var(--color-accent-success);
+}
+
+.learning-step__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+}
+
+.learning-step__icon {
+    font-size: 1.25rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-elevated);
+    border-radius: var(--radius-sm);
+}
+
+.learning-step__info {
+    flex: 1;
+}
+
+.learning-step__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 2px;
+}
+
+.learning-step__description {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.learning-step__status {
+    display: flex;
+    align-items: center;
+}
+
+.status-badge {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.status-badge--completed {
+    background: var(--color-accent-success);
+    color: white;
+}
+
+.status-badge--active {
+    background: var(--color-accent-primary);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Expanded Content */
+.learning-step__content {
+    padding: var(--space-lg) var(--space-md);
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.learning-step__content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.learning-step__content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.learning-step__content::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+}
+
+.learning-step__content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-hover);
+}
+
+/* .learning-step__body {
+    /* Container for ReactMarkdown content  */
+
+/* Remove top margin from first element in body */
+.learning-step__body > :first-child {
+    margin-top: 0 !important;
+}
+
+/* Remove bottom margin from last element in body */
+.learning-step__body > :last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Better typography for content */
+.learning-step__content h1,
+.learning-step__content h2,
+.learning-step__content h3 {
+    color: var(--color-text-primary);
+    font-weight: 700;
+    margin: var(--space-lg) 0 var(--space-sm);
+    font-size: 1rem;
+}
+
+.learning-step__content h1:first-child,
+.learning-step__content h2:first-child,
+.learning-step__content h3:first-child {
+    margin-top: 0;
+}
+
+.learning-step__content h4,
+.learning-step__content h5 {
+    color: var(--color-accent-primary);
+    font-weight: 600;
+    margin: var(--space-md) 0 var(--space-xs);
+    font-size: 0.85rem;
+}
+
+.learning-step__content p {
+    margin: var(--space-sm) 0;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    font-size: 0.88rem;
+}
+
+.learning-step__content ul,
+.learning-step__content ol {
+    margin: var(--space-sm) 0;
+    padding-left: 1.5rem;
+}
+
+.learning-step__content li {
+    margin-bottom: 0.35rem;
+    line-height: 1.7;
+    font-size: 0.86rem;
+    color: var(--color-text-secondary);
+}
+
+.learning-step__content ul li::marker {
+    color: var(--color-accent-primary);
+}
+
+.learning-step__content blockquote {
+    margin: var(--space-md) 0;
+    padding: var(--space-sm) var(--space-md);
+    border-left: 3px solid var(--color-accent-primary);
+    background: rgba(var(--color-accent-secondary-rgb), 0.08);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
+
+.learning-step__content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-sm) 0;
+    font-size: 0.8rem;
+}
+
+.learning-step__content th,
+.learning-step__content td {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+.learning-step__content th {
+    background: var(--color-bg-elevated);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.learning-step__content pre {
+    background: var(--color-bg-input);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text-primary);
+    margin: var(--space-md) 0;
+    border: 1px solid var(--color-border);
+    line-height: 1.6;
+}
+
+.learning-step__content code {
+    background: rgba(var(--color-accent-secondary-rgb), 0.12);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    color: var(--color-accent-secondary);
+    border: 1px solid rgba(var(--color-accent-secondary-rgb), 0.2);
+}
+
+.learning-step__content pre code {
+    background: transparent;
+    padding: 0;
+    border: none;
+    color: inherit;
+}
+
+.learning-step__content strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.learning-step__content em {
+    color: var(--color-accent-secondary);
+    font-style: italic;
+}
+
+.learning-step__content hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: var(--space-lg) 0;
+}
+
+.learning-step__content a {
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.learning-step__content a:hover {
+    border-bottom-color: var(--color-accent-primary);
+}
+
+/* Key Points */
+.learning-step__keypoints {
+    background: rgba(var(--color-accent-secondary-rgb), 0.12);
+    border-left: 3px solid var(--color-accent-primary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    margin: var(--space-md) 0;
+}
+
+.learning-step__keypoints h5 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.learning-step__keypoints ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.learning-step__keypoints li {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+/* Mark Complete Button */
+.mark-complete-btn {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: var(--space-md);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mark-complete-btn:hover {
+    background: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    color: white;
+}
+
+.learning-step__hint {
+    padding: var(--space-sm);
+    background: rgba(var(--color-accent-secondary-rgb), 0.12);
+    border-left: 3px solid var(--color-accent-primary);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+/* Navigation */
+.learning-path__navigation {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 0.6rem var(--space-md);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+    border-color: var(--color-accent-primary);
+    background: rgba(var(--color-accent-secondary-rgb), 0.12);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.nav-btn--next {
+    background: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    color: white;
+}
+
+.nav-btn--next:hover:not(:disabled) {
+    background: var(--color-accent-secondary);
+}
+
+/* Scrollbar */
+.learning-path__steps::-webkit-scrollbar {
+    width: 4px;
+}
+
+.learning-path__steps::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.learning-path__steps::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 2px;
+}
+
